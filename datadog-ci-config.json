@@ -1,0 +1,33 @@
+{
+    "apiKey": "",
+    "appKey": "",
+    "datadogSite": "datadoghq.com",
+    "files": "{,!(node_modules)/**/}*.synthetics.json",
+    "global": {
+        "allowInsecureCertificates": true,
+        "basicAuth": { "username": "test", "password": "test" },
+        "body": "{\"fakeContent\":true}",
+        "bodyType": "application/json",
+        "cookies": "name1=value1;name2=value2;",
+        "deviceIds": ["laptop_large"],
+        "followRedirects": true,
+        "headers": { "<NEW_HEADER>": "<NEW_VALUE>" },
+            "locations": ["aws:us-west-1"],
+        "retry": { "count": 2, "interval": 300 },
+        "executionRule": "blocking",
+        "startUrl": "{{URL}}?static_hash={{STATIC_HASH}}",
+        "variables": { "titleVariable": "new value" },
+        "pollingTimeout": 180000
+    },
+    "proxy": {
+      "auth": {
+        "username": "login",
+        "password": "pwd"
+      },
+      "host": "3.32.29.120",
+      "port": 8080,
+      "protocol": "http"
+    },
+    "subdomain": "subdomainname",
+    "tunnel": true
+}
